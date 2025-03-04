@@ -1,0 +1,9 @@
+Flask
+python-dotenv
+requests
+Pillow
+google-generativeai
+beautifulsoup4
+webdriver-manager
+selenium
+python-pptx

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News to Google Slides</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Google Slides from News</h1>
+        <button id="generateBtn">Generate PPT</button>
+        <p id="status"></p>
+        
+        <!-- Download button -->
+        <a id="downloadLink" style="display:none;" download>Download PPT</a>
+        
+        <!-- Open Google Slides button -->
+        <a id="openSlidesBtn" target="_blank" style="display:none;">Open in Google Slides</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
