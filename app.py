@@ -43,6 +43,10 @@ def download():
                          mimetype="application/vnd.openxmlformats-officedocument.presentationml.presentation")
     else:
         return jsonify({"error": "PPT file not found."}), 404
+    
+import os
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.getenv("PORT", 5000))  # Use Railway's assigned port
+    app.run(host="0.0.0.0", port=port, debug=True)
+
