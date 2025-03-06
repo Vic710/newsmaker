@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News to Google Slides</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Presentation Generator</title>
+  <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Generate Google Slides from News</h1>
-        <button id="generateBtn">Generate PPT</button>
-        <p id="status"></p>
-        
-        <!-- Download button -->
-        <a id="downloadLink" style="display:none;" download>Download PPT</a>
-        
-        <!-- Open Google Slides button -->
-        <a id="openSlidesBtn" target="_blank" style="display:none;">Open in Google Slides</a>
+  <header>
+    <div class="header-container">
+      <h1>Presentation Generator</h1>
+      <a href="/logout" class="logout-btn">Logout</a>
     </div>
-
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </header>
+  <main>
+    <div class="card">
+      <h2>Generate Your Presentation</h2>
+      <p>Click the button below to generate a Business Technology PowerPoint presentation.</p>
+      <button id="generateBtn" class="generate-btn">Generate Presentation</button>
+      <!-- Loading animation (hidden initially) -->
+      <div id="loading" class="spinner" style="display: none;"></div>
+      <p id="status"></p>
+      <div class="btn-group">
+        <a id="downloadLink" class="button" style="display: none;" download>Download PPT</a>
+        <a id="openSlidesBtn" class="button secondary" style="display: none;" target="_blank">Open in Google Slides</a>
+      </div>
+    </div>
+  </main>
+  <script src="/static/script.js"></script>
 </body>
 </html>

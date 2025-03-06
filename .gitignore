@@ -1,4 +1,4 @@
 # Ignore environment variables and credentials  
 .env  
 service_credentials.json  
-service_credentials.json
+
